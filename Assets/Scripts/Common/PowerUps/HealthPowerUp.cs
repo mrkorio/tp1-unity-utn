@@ -8,6 +8,6 @@ public class HealthPowerUp : PowerUp
 
     public override void ExecutePowerUp(GameObject player)
     {
-          player.GetComponent<Health>().Add
+        player.GetComponent<Health>().AddHealth(restoreAmount);
     }
 }
