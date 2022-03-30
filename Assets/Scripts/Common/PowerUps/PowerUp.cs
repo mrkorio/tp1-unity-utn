@@ -4,9 +4,16 @@ using UnityEngine;
 
 public abstract class PowerUp : MonoBehaviour
 {
-    public int duration = 5;
+    public int duration = 5; // In seconds
+
+    public GameObject playerRef;
 
     public abstract void ExecutePowerUp(GameObject player);
+
+    public virtual void DismissPowerup()
+    {
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {

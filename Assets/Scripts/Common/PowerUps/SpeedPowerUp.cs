@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SpeedPowerUp : PowerUp
 {
+
     public override void ExecutePowerUp(GameObject player)
     {
-        throw new System.NotImplementedException();
+        
     }
+
 
 }

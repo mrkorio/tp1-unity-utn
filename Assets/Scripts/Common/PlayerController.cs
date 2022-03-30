@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
+    public PlayerAttributes attributes;
     public float speed;
     public float tilt;              // tilt factor
     public Boundary boundary;       // movememnt boundary
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody>();
+        
     }
 
     void FixedUpdate()
@@ -48,6 +51,11 @@ public class PlayerController : MonoBehaviour
             nextFire = Time.time + fireRate;
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
         }
+    }
+
+    public void SetPlayerAttributes(PlayerAttributes attributes)
+    {
+        this.attributes = attributes;
     }
 
     void Destroyed()
